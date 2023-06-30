@@ -1,0 +1,44 @@
+<div class="main_box">
+    <h2>E - Cmentarz</h2>
+    <span *ngIf="role == 1" >Panel administracyjny</span>
+
+    <div class="option_button">
+        <button (click)="showGraves()">Podgląd grobów</button>
+    </div>
+    
+    <div class="option_button">
+        <button (click)="showPlannedBurials()">Kalendarium pogrzebów</button>
+    </div>
+
+    <div *ngIf="role == 0 || role == 1" class="option_button">
+        <button (click)="showShop()">Sklep online</button>
+    </div>
+
+    <div *ngIf="role == 1" class="option_button">
+        <button (click)="showAddBurried()">Zarządzaj zmarłymi</button>
+    </div>
+
+    <div *ngIf="role == 1" class="option_button">
+        <button (click)="showAddGrave()">Zarządzaj grobami</button>
+    </div>
+
+    <div *ngIf="role == 1" class="option_button">
+        <button (click)="showAddGravedigger()">Zarządzaj grabarzami</button>
+    </div>
+
+    <section class="bottom_panel">
+
+        <div *ngIf="role==1" class="option_button manage_button">
+            <button (click)="showAccountManager()">Zarządzaj kontami</button> 
+        </div>       
+        
+        <div *ngIf="role == 0 || role == 1" class="option_button delete_button">
+            <button (click)="deleteSelfUser()" >Usuń konto</button>
+        </div>
+
+        <div class="creators">
+            <fa-icon class="logo" icon="church"></fa-icon>
+        </div>
+
+    </section>
+</div>

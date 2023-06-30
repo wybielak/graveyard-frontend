@@ -1,0 +1,2 @@
+E:\Studia\3. Programowanie obiektowe i graficzne\projekt\Graveyard\Graveyard-Frontend\obj\Debug\Graveyard-Frontend.esproj.SuggestedBindingRedirects.cache
+E:\Studia\3. Programowanie obiektowe i graficzne\projekt\Graveyard\Graveyard-Frontend\obj\Debug\Graveyard-Frontend.esproj.CoreCompileInputs.cache

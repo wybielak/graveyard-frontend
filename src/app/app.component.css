@@ -1,0 +1,108 @@
+* {
+    font-family: sans-serif;
+}
+
+.default, .admin, .user {
+    display: flex;
+    flex-direction: column;
+}
+
+.login_button {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.login_button button {
+    position: fixed;
+    padding: 10px 25px;
+    margin: 15px;
+
+    border-radius: 10px;
+    background: #302d55;
+    color: #FAF8FF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.login_button button:hover {
+    background: #00A981;
+}
+
+.menu_content_box {
+    display: flex;
+    flex-direction: row;
+}
+
+grv-graves {
+    height: 100vh;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+}
+
+grv-planned-burrials-list {
+    height: 100vh;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+}
+
+grv-add-burried {
+    height: 100vh;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+}
+
+grv-add-grave {
+    height: 100vh;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+}
+
+grv-add-gravedigger {
+    height: 100vh;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+}
+
+grv-delete-accounts {
+    height: 100vh;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+}
+
+.background-opacity::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--bg-image-color);
+    opacity: var(--bg-image-opacity);
+}
+
+.background-photo {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg1 {
+    background-image: url('gravepic.jpg');
+    background-attachment: fixed;
+    --bg-image-opacity: 0.9;
+    --bg-image-color: #FAF8FF;
+
+    position: relative;
+    isolation: isolate;
+}

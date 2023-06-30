@@ -1,0 +1,19 @@
+<section>
+    <h1>Nadchodzące pogrzeby</h1>
+    <table>
+        <tr class="table-row">
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Data urodzenia</th>
+            <th>Data śmierci</th>
+            <th>Data planowanego pochówku</th>
+        </tr>
+        <tr class="table-row" *ngFor="let planned of plannedToBeBurried">
+            <td>{{planned.name}}</td>
+            <td>{{planned.lastname}}</td>
+            <td>{{planned.date_of_birth}}</td>
+            <td>{{planned.date_of_death}}</td>
+            <td>{{planned.burialDate| date: 'MM/dd/yyyy'}}</td>
+        </tr>
+    </table>
+</section>

@@ -1,0 +1,127 @@
+<div class="bg1 background-photo background-opacity">
+
+
+
+
+<div [hidden]="hide_login_panel"> <!-- Panel logowania -->
+    
+    <div class="login_button">
+        <button (click)="toggleLoginPanel()">Powrót</button>
+    </div>
+
+    <grv-login [hidden]="switch_login"></grv-login>
+    <grv-register [hidden]="!switch_login"></grv-register>
+</div>
+
+
+<div [hidden]="!hide_login_panel" [ngSwitch]="role">
+
+  <div *ngSwitchCase="0"> <!-- Panel użytkownika -->
+
+    <div class="user" class="login_button">
+        <button (click)="logout()">Wyloguj</button>
+    </div>
+
+    <div class="menu_content_box">
+        <grv-side-menu></grv-side-menu>
+
+        <!-- <p>witaj user!</p> -->
+
+        <div [ngSwitch]="page_in_menu">
+
+          <div *ngSwitchCase="0">
+            <grv-graves></grv-graves>
+          </div>
+
+          <div *ngSwitchCase="1">
+            <grv-shop></grv-shop>
+          </div>
+
+          <div *ngSwitchCase="2">
+            <grv-planned-burrials-list></grv-planned-burrials-list>
+          </div>
+
+        </div>
+
+    </div>
+
+  </div>
+
+  <div class="admin" *ngSwitchCase="1"> <!-- Panel admina -->
+
+    <div class="login_button">
+        <button (click)="logout()">Wyloguj</button>
+    </div>
+
+    <div class="menu_content_box">
+        <grv-side-menu></grv-side-menu>
+
+        <!-- <p>witaj admin!</p> -->
+
+        <div [ngSwitch]="page_in_menu">
+
+          <div *ngSwitchCase="0">
+            <grv-graves></grv-graves>
+          </div>
+
+          <div *ngSwitchCase="1">
+            <grv-shop></grv-shop>
+          </div>
+
+          <div *ngSwitchCase="2">
+            <grv-planned-burrials-list></grv-planned-burrials-list>
+          </div>
+
+          <div *ngSwitchCase="3">
+            <grv-add-burried></grv-add-burried>
+          </div>
+
+          <div *ngSwitchCase="4">
+            <grv-add-grave></grv-add-grave>
+          </div>
+
+          <div *ngSwitchCase="5">
+            <grv-add-gravedigger></grv-add-gravedigger>
+          </div>
+            
+          <div *ngSwitchCase="6">
+            <grv-delete-accounts></grv-delete-accounts>
+          </div>
+          
+        </div>
+    </div>
+
+  </div>
+
+  <div class="default" *ngSwitchDefault> <!-- Panel niezalogowanego -->
+
+    <div class="login_button">
+        <button (click)="toggleLoginPanel()">Zaloguj</button>
+    </div>
+
+        <div class="menu_content_box">
+        <grv-side-menu></grv-side-menu>
+
+        <div [ngSwitch]="page_in_menu">
+
+          <div *ngSwitchCase="0">
+            <grv-graves></grv-graves>
+          </div>
+
+          <div *ngSwitchCase="1">
+            <grv-shop></grv-shop>
+          </div>
+
+          <div *ngSwitchCase="2">
+            <grv-planned-burrials-list></grv-planned-burrials-list>
+          </div>
+
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
